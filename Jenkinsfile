@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Restore') { 
             steps {
-                bat 'dotnet restore C:/Users/Administrator/AppData/Local/Jenkins/.jenkins/workspace/Alarmnet/BuildTest/WebApplication1'
+                bat 'dotnet restore BuildTest/WebApplication1'
             }
         }
         stage('Build') { 
