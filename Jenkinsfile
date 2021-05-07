@@ -1,11 +1,6 @@
 pipeline {
     agent any 
     stages {
-        stage('Clone') { 
-            steps {
-                bat 'git clone s
-            }
-        }
         stage('Restore') { 
             steps {
                 bat 'dotnet restore BuildTest/WebApplication1'
