@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-        stage('Build') { 
+        stage('Packaging And Deploy') { 
             steps {
                 echo 'Building..'
                 powershell(returnStdout: true, script: '.BuildandDeploy.ps1')	
