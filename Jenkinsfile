@@ -3,7 +3,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'Building..'
-                bat '"C:\Program Files (x86)\MSBuild\14.0\Bin\msbuild\" BuildTest.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                powershell(returnStdout: true, script: '.BuildandDeploy.ps1')	
             }
         }
         stage('Publish') { 
